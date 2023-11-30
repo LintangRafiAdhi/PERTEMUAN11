@@ -26,10 +26,62 @@ result_d = d("hello")
 print(*result_d, sep="")
 
 ```
+
+<p>Kode tersebut menggunakan fungsi lambda (fungsi anonim) dalam Python untuk melakukan beberapa operasi matematika dan manipulasi string. Berikut adalah penjelasan langkah demi langkah:<p></p>
+
+1. **Mendefinisikan Fungsi Lambda:**
+   - Fungsi lambda `a` menerima satu parameter `x` dan mengembalikan nilai `x` pangkat 2.
+   - Fungsi lambda `b` menerima dua parameter `x` dan `y`, kemudian mengembalikan nilai akar kuadrat dari jumlah kuadrat `x` dan `y`.
+   - Fungsi lambda `c` menerima parameter sejumlah variabel panjang (`*args`) dan mengembalikan rata-rata dari semua argumen.
+   - Fungsi lambda `d` menerima satu parameter string `s` dan mengembalikan string unik dengan karakter-karakter unik di dalamnya.
+
+2. **Memanggil Fungsi Lambda:**
+   - Memanggil fungsi lambda `a` dengan argumen 9 dan menyimpan hasilnya dalam variabel `result_a`.
+   - Memanggil fungsi lambda `b` dengan argumen 6 dan 8, menyimpan hasilnya dalam variabel `result_b`.
+   - Memanggil fungsi lambda `c` dengan argumen 2, 3, 4, 5, 6, menyimpan hasilnya dalam variabel `result_c`.
+   - Memanggil fungsi lambda `d` dengan argumen "hello", menyimpan hasilnya dalam variabel `result_d`.
+
+3. **Menampilkan Hasil:**
+   - Mencetak hasil pemanggilan fungsi lambda `a`.
+   - Mencetak hasil pemanggilan fungsi lambda `b`.
+   - Mencetak hasil pemanggilan fungsi lambda `c`.
+   - Mencetak hasil pemanggilan fungsi lambda `d` setelah mengubah hasilnya menjadi string dan menghilangkan karakter-karakter duplikat.
+
+4. **Output yang Dihasilkan:**
+   - Hasil pemanggilan `a(9)` adalah `81`.
+   - Hasil pemanggilan `b(6, 8)` adalah `10.0`.
+   - Hasil pemanggilan `c(2, 3, 4, 5, 6)` adalah `4.0`.
+   - Hasil pemanggilan `d("hello")` adalah `helo`. (tanpa duplikat)
+
+Jadi, kode ini menggunakan fungsi lambda untuk membuat fungsi kecil yang dapat digunakan dalam berbagai operasi matematika dan manipulasi string.
+
 ![Screenshot (27)](https://github.com/calamities17/PERTEMUAN11/assets/147371058/59d462db-f31b-419d-b582-9297bcea320c)
 
 
 <H1>PRAKTIKUM</H1>
+
+<p>Buat program sederhana dengan mengaplikasikan penggunaan fungsi yang akan menampilkan daftar nilai mahasiswa, dengan ketentuan:</p>
+ 
+*Fungsi tambah() untuk menambah data*
+
+*Fungsi tampilkan() untuk menampilkan data*
+
+*Fungsi hapus(nama) untuk menghapus data berdasarkan nama*
+
+*Fungsi ubah(nama) untuk mengubah data berdasarkan nama*
+
+<p>jangan lupa install pretty table untuk menampilkan table.Anda dapat menginstal pustaka PrettyTable menggunakan pip, yang merupakan manajer paket standar untuk Python. Buka terminal atau command prompt, lalu jalankan perintah berikut:</p>
+
+```python
+pip install prettytable
+```
+
+<p>Pastikan Anda memiliki koneksi internet yang stabil karena pip akan mengunduh dan menginstal pustaka PrettyTable dari Python Package Index (PyPI). Setelah proses instalasi selesai, Anda dapat mengimpor PrettyTable ke dalam skrip atau program Python Anda dengan menggunakan pernyataan import.</p>
+
+```python
+from prettytable import PrettyTable
+```
+<p>sekarang kita masuk ke praktikum</p>
 
 ```python
 from prettytable import PrettyTable
@@ -127,4 +179,52 @@ while True:
 
 
 <H1>FLOWCHART</H1>
+
+![flc2](https://github.com/calamities17/PERTEMUAN11/assets/147371058/c9dd73b6-53e8-441e-be70-74afa06f1634)
+
+<p>penjelasan</p>
+Berikut adalah penjelasan flowchart dari kodingan yang Anda berikan:
+
+1. **Start:** Program dimulai.
+2. **Inisialisasi data_mahasiswa:** Membuat dictionary kosong sebagai tempat penyimpanan data mahasiswa.
+3. **Perulangan Utama:**
+   - Mencetak menu pilihan untuk pengguna.
+   - Menerima input pilihan dari pengguna.
+   - Jika pilihan adalah "1", maka langkah ke `tambah_data`.
+   - Jika pilihan adalah "2", maka langkah ke `ubah_data`.
+   - Jika pilihan adalah "3", maka langkah ke `hapus_data`.
+   - Jika pilihan adalah "4", maka langkah ke `tampilkan_data`.
+   - Jika pilihan adalah "5", maka langkah ke `cari_data`.
+   - Jika pilihan adalah "6", maka mencetak "Program selesai" dan keluar dari perulangan utama.
+   - Jika pilihan tidak valid, mencetak "Pilihan tidak valid. Masukkan angka 1-6."
+4. **Tambah Data (tambah_data):**
+   - Menerima input nama, nim, nilai tugas, uts, dan uas dari pengguna.
+   - Menghitung nilai akhir menggunakan fungsi `hitung_nilai_akhir`.
+   - Menambahkan data mahasiswa ke dalam `data_mahasiswa` dengan format dictionary.
+   - Mencetak "Data mahasiswa berhasil ditambahkan."
+5. **Ubah Data (ubah_data):**
+   - Menerima input nama mahasiswa yang akan diubah datanya.
+   - Jika nama ditemukan di dalam `data_mahasiswa`, menerima input nilai tugas, uts, dan uas baru.
+   - Menghitung nilai akhir baru.
+   - Mengubah data mahasiswa yang sesuai.
+   - Mencetak "Data mahasiswa berhasil diubah."
+   - Jika nama tidak ditemukan, mencetak "Nama mahasiswa tidak ditemukan."
+6. **Hapus Data (hapus_data):**
+   - Menerima input nama mahasiswa yang akan dihapus datanya.
+   - Jika nama ditemukan di dalam `data_mahasiswa`, menghapus data mahasiswa tersebut.
+   - Mencetak "Data mahasiswa berhasil dihapus."
+   - Jika nama tidak ditemukan, mencetak "Nama mahasiswa tidak ditemukan."
+7. **Tampilkan Data (tampilkan_data):**
+   - Membuat objek PrettyTable untuk menampilkan data dalam bentuk tabel.
+   - Menambahkan field names ke tabel.
+   - Mengisi tabel dengan data mahasiswa.
+   - Mencetak tabel sebagai daftar nilai mahasiswa.
+8. **Cari Data (cari_data):**
+   - Menerima input nama mahasiswa yang akan dicari.
+   - Jika nama ditemukan di dalam `data_mahasiswa`, membuat tabel dan menampilkan data mahasiswa tersebut.
+   - Jika nama tidak ditemukan, mencetak "Nama mahasiswa tidak ditemukan."
+9. **Selesai:** Program mencetak "Program selesai" dan berakhir.
+
+Semua proses dalam flowchart tersebut mewakili langkah-langkah yang diambil dalam program dan cara program berinteraksi dengan pengguna serta data mahasiswa.
+
 
